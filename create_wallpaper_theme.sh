@@ -15,7 +15,19 @@ do
 done
 
 themepath="/usr/share/gnome-background-properties/"
-customwp="/usr/share/backgrounds/custom/"
+bgpath="/usr/share/backgrounds/"
+
+if [ ! -d "$themepath" ]; then
+    echo "issue: $themepath doesn't exist"
+    exit 1
+fi
+
+if [ ! -d "$bgpath" ]; then
+    echo "issue: $bgpath doesn't exist"
+    exit 1
+fi
+
+customwp="${bgpath}custom/"
 lexp=$(echo "$light" | awk -F . '{print $NF}')
 dexp=$(echo "$dark" | awk -F . '{print $NF}')
 lightwp=$customwp$name-l.$lexp
