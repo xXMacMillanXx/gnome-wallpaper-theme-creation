@@ -5,6 +5,6 @@ Choose two wallpapers to create a simple theme which uses one for the light them
 ## Usage
 
 ```sh
-./create_wallpaper_theme.sh -n theme_name -l path/light_theme_image.jpeg -d path/dark_theme_image.png
+sudo ./create_wallpaper_theme.sh -n theme_name -l path/light_theme_image.jpeg -d path/dark_theme_image.png
 ```
 
